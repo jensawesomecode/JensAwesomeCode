@@ -1,0 +1,1 @@
+There are various website requirements for publishing apps in the various places where apps are published. This website will serve as a central repository for all of those requirements, as well as a bit about me. 
