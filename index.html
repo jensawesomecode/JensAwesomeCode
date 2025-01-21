@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jen's Awesome Code</title>
+    <style>
+        body {
+            background-color: #4B0082; /* Dark Purple */
+            color: cyan;
+            font-family: 'Press Start 2P', monospace; /* Art Deco Monospace */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        header img {
+            height: 50px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: cyan;
+        }
+
+        main {
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .projects img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .projects img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            header img {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="jensawesomecode.webp" alt="Jen's Awesome Code Logo">
+        <nav>
+            <a href="mailto:jensawesomeshow@gmail.com">Email</a>
+            <a href="https://www.facebook.com/jennifer.barrett.10" target="_blank">Facebook</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Jen's Awesome Code</h1>
+        <p>Co-creating engaging and innovative coding projects that inspire and delight.</p>
+
+        <div class="projects">
+            <a href="https://example.com/blob" target="_blank">
+                <img src="placeholder_blob.jpg" alt="Blob Project">
+            </a>
+            <a href="https://example.com/greedmonster" target="_blank">
+                <img src="your_greedmonster_image.webp" alt="GreedMonster Project">
+            </a>
+        </div>
+    </main>
+
+    <script>
+        // Delay loading the project images
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                document.querySelectorAll('.projects img').forEach(img => {
+                    img.style.opacity = 1;
+                });
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
