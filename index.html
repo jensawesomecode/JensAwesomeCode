@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jen's Awesome Code</title>
-       <style>
+           <style>
         body {
             background-color: #4B0082; /* Dark Purple */
             color: cyan;
@@ -16,9 +16,10 @@
         header {
             display: flex;
             align-items: center;
+            max-width: 1050px; /* Constrain the header width */
+            margin: 0 auto; /* Center the header horizontally */
             padding: 10px;
-                        margin: 50px auto;
-            max-width: 1050px;
+            position: relative; /* Allow precise alignment */
         }
 
         header img {
@@ -27,8 +28,9 @@
 
         .header-right {
             text-align: center;
-            position: relative; /* Allow positioning */
-            left: 250px; /* Offset by half of the remaining space */
+            position: absolute; /* Enable precise placement */
+            right: 0; /* Align to the right of the header */
+            width: calc(100% - 250px); /* Ensure alignment matches main width */
         }
 
         .header-right h1 {
@@ -94,7 +96,8 @@
             }
 
             .header-right {
-                left: 0; /* Remove offset for mobile */
+                position: static; /* Remove precise positioning for mobile */
+                width: 100%; /* Use full width for mobile */
             }
 
             .projects {
