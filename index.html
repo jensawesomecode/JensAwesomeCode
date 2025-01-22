@@ -15,23 +15,27 @@
 
         header {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
+            text-align: center;
             padding: 10px;
         }
 
         header img {
             height: 250px;
         }
+
         header h1 {
             font-size: 26pt;
-            margin: 0;
+            margin: 10px 0;
         }
 
         header nav {
             display: flex;
             gap: 15px;
             font-size: 16pt;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         header nav a {
@@ -45,12 +49,14 @@
             max-width: 800px;
         }
 
-                main p {
+        main p {
             font-size: 16pt;
+            margin-bottom: 20px; /* Added space below intro paragraph */
         }
 
-                main h1 {
+        main h1 {
             font-size: 26pt;
+            margin-bottom: 20px;
         }
 
         .projects {
@@ -72,12 +78,16 @@
         }
 
         @media (max-width: 600px) {
-            .projects {
-                grid-template-columns: 1fr;
+            header {
+                align-items: flex-start;
             }
 
             header img {
-                height: 40px;
+                height: 200px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -85,14 +95,14 @@
 <body>
     <header>
         <img src="jensawesomecodelogo.webp" alt="Jen's Awesome Code Logo">
-                <h1>Welcome to Jen's Awesome Code</h1><br>
-        <div></div><nav>
+        <h1>Welcome to Jen's Awesome Code</h1>
+        <nav>
             <a href="mailto:jensawesomeshow@gmail.com">Email</a>
             <a href="https://www.facebook.com/jennifer.barrett.10" target="_blank">Facebook</a>
-        </nav></div>
+        </nav>
     </header>
     <main>
-
+        <h1>Main Heading Example</h1>
         <p>Co-creating engaging and innovative coding projects that inspire and delight. Check out the projects I've worked on below. </p>
 
         <div class="projects">
@@ -100,7 +110,7 @@
                 <img src="jensawesomecodelogo.webp" alt="Blob Project">
             </a>
             <a href="https://example.com/greedmonster" target="_blank">
-                <img src="your_greedmonster_image.webp" alt="placeholder Project">
+                <img src="your_greedmonster_image.webp" alt="GreedMonster Project">
             </a>
         </div>
     </main>
