@@ -70,14 +70,16 @@ main a {
             margin-bottom: 20px;
         }
 
-        .projects {
+             .projects {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-top: 20px;
             opacity: 0; /* Start hidden */
-            transition: opacity 1s ease-in-out; /* Fade in effect */
+            visibility: hidden; /* Ensure it's invisible initially */
+            transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Add visibility transition */
         }
+
 
         .projects img {
             max-width: 100%;
@@ -136,14 +138,14 @@ main a {
         </div>
     </main>
 
-    <script>
-        // Delay loading the project images
+ <script>
+        // Delay loading the projects div
         document.addEventListener('DOMContentLoaded', () => {
+            const projectsDiv = document.querySelector('.projects');
             setTimeout(() => {
-                document.querySelectorAll('.projects img').forEach(img => {
-                    img.style.opacity = 1;
-                });
-            }, 30000);
+                projectsDiv.style.visibility = 'visible'; // Make it visible
+                projectsDiv.style.opacity = 1; // Trigger fade-in effect
+            }, 1000); // Delay by 1 second
         });
     </script>
 </body>
