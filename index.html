@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jen's Awesome Code</title>
-    <style>
+        <style>
         body {
             background-color: #4B0082; /* Dark Purple */
             color: cyan;
@@ -13,10 +13,10 @@
             padding: 0;
         }
 
- header {
+        header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between; /* Added to distribute logo and header-right */
             padding: 10px;
         }
 
@@ -26,23 +26,22 @@
 
         .header-right {
             text-align: center;
-            flex: 1;
+            margin: 0 auto; /* Ensures this section is centered relative to the page */
         }
 
-        header h1 {
+        .header-right h1 {
             font-size: 26pt;
             margin: 10px 0;
         }
 
-        header nav {
+        .header-right nav {
             display: flex;
             gap: 15px;
             font-size: 16pt;
-            flex-wrap: wrap;
             justify-content: center;
         }
 
-        header nav a {
+        .header-right nav a {
             text-decoration: none;
             color: cyan;
         }
@@ -81,13 +80,15 @@
             transform: scale(1.05);
         }
 
-              @media (max-width: 600px) {
+        @media (max-width: 600px) {
             header {
                 flex-direction: column;
                 align-items: center;
             }
+
             header img {
                 height: 200px;
+                margin-bottom: 10px;
             }
 
             .projects {
