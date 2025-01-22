@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jen's Awesome Code</title>
-        <style>
+       <style>
         body {
             background-color: #4B0082; /* Dark Purple */
             color: cyan;
@@ -15,7 +15,7 @@
 
         header {
             display: flex;
-            justify-content: space-between; /* Added to distribute logo and header-right */
+            align-items: center;
             padding: 10px;
         }
 
@@ -23,12 +23,12 @@
             height: 250px;
         }
 
-      
         .header-right {
             text-align: center;
-            padding-left: 0; /* Align to the center of the page with right margin */
-            padding-right: 250px; /* Added right margin of 250px */
+            position: relative; /* Allow positioning */
+            left: 125px; /* Offset by half of the remaining space */
         }
+
         .header-right h1 {
             font-size: 26pt;
             margin: 10px 0;
@@ -90,8 +90,9 @@
                 height: 200px;
                 margin-bottom: 10px;
             }
-  .header-right {
-                padding: 0; /* Remove left alignment on mobile */
+
+            .header-right {
+                left: 0; /* Remove offset for mobile */
             }
 
             .projects {
