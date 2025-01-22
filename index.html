@@ -24,11 +24,12 @@
             height: 250px;
         }
 
+      
         .header-right {
             text-align: center;
-            margin: 0 auto; /* Ensures this section is centered relative to the page */
+            margin-left: auto; /* Align to the center of the page with right margin */
+            margin-right: 250px; /* Added right margin of 250px */
         }
-
         .header-right h1 {
             font-size: 26pt;
             margin: 10px 0;
@@ -89,6 +90,10 @@
             header img {
                 height: 200px;
                 margin-bottom: 10px;
+            }
+  .header-right {
+                margin-right: 0; /* Remove right margin on mobile */
+                margin-left: 0; /* Remove left alignment on mobile */
             }
 
             .projects {
