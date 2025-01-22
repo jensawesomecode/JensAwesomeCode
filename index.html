@@ -13,16 +13,20 @@
             padding: 0;
         }
 
-        header {
+ header {
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            text-align: center;
             padding: 10px;
         }
 
         header img {
             height: 250px;
+        }
+
+        .header-right {
+            text-align: center;
+            flex: 1;
         }
 
         header h1 {
@@ -77,11 +81,11 @@
             transform: scale(1.05);
         }
 
-        @media (max-width: 600px) {
+              @media (max-width: 600px) {
             header {
-                align-items: flex-start;
+                flex-direction: column;
+                align-items: center;
             }
-
             header img {
                 height: 200px;
             }
@@ -95,16 +99,16 @@
 <body>
     <header>
         <img src="jensawesomecodelogo.webp" alt="Jen's Awesome Code Logo">
+            <div class="header-right">
         <h1>Welcome to Jen's Awesome Code</h1>
         <nav>
             <a href="mailto:jensawesomeshow@gmail.com">Email</a>
             <a href="https://www.facebook.com/jennifer.barrett.10" target="_blank">Facebook</a>
-        </nav>
+        </nav></div>
     </header>
     <main>
-        <h1>Main Heading Example</h1>
         <p>Co-creating engaging and innovative coding projects that inspire and delight. Check out the projects I've worked on below. </p>
-
+<h1>Projects</h1>
         <div class="projects">
             <a href="https://example.com/blob" target="_blank">
                 <img src="jensawesomecodelogo.webp" alt="Blob Project">
