@@ -79,8 +79,41 @@ main a {
             visibility: hidden; /* Ensure it's invisible initially */
             transition: opacity 1s ease-in-out, visibility 1s ease-in-out; /* Add visibility transition */
         }
+               
+.project-item {
+    display: flex;
+    flex-direction: column; /* Ensures image and text stay together */
+    align-items: center;
+    text-align: center;
+}
 
+  .project-item a {
+ font-size: 16pt;
+    color: cyan;
+    text-decoration: none;
+}
+       .project-item img {
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 1s;
+}
 
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+.project-item p {
+    font-size: 16pt;
+    margin-bottom: 10px;
+}
+
+  .projects img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 1s;
+        }
         .projects img {
             max-width: 100%;
             height: auto;
@@ -127,29 +160,33 @@ main a {
     <main>
         <p>Co-creating engaging and innovative coding projects that inspire and delight. Check out the projects I've worked on below. </p>
 <h1>Projects</h1>
-        <div class="projects">
-           <a href="https://jensawesomecode.itch.io/dont-drown" target="_blank">
-                <img src="dontdrown.png" alt="Cover image for computer game Don't Drown">
-                <p>Description: Underwater maze, survival, action, adventure, puzzle, game jam, time-based challenge.</p></a>
+     <div class="projects">
+    <div class="project-item">
+        <a href="https://jensawesomecode.itch.io/dont-drown" target="_blank">
+            <img src="dontdrown.png" alt="Cover image for computer game Don't Drown">
+        </a>
+        <p><a href="https://jensawesomecode.itch.io/dont-drown" target="_blank">Description: Underwater maze, survival, action, adventure, puzzle, game jam, time-based challenge.</a></p>
+        <p>Okay, so picture this: You’re deep underwater, totally lost in these twisty, shadowy caves, and your oxygen? Yeah, it’s running out. Fast. <strong>Don’t Drown</strong> is all about staying cool under pressure—literally. You’ve got to snatch bubbles from coral, figure out the maze, and find your way out before time (and air) runs out. No pressure, right?</p>
+        <p>This was a <strong>wild</strong> ride to make. We built the whole thing in just 48 hours during a game jam—pure chaos, fueled by caffeine and questionable decision-making. Our team? Absolute legends. Colin Witow’s the seasoned pro (12 jams under his belt), while the rest of us—Russell Nadin, David Kingdavong, and me, Jen Barrett—jumped into our very first jam with zero hesitation and **a lot** of enthusiasm. Somehow, we pulled off this adrenaline-fueled underwater adventure, and we are **so** proud of it.</p>
+        <p>It’s part puzzle, part survival, all heart-pounding action. Ready to see if you can make it out alive?</p>
+        <p>Go on. Dive in.</p>
+    </div>
 
-<p>Okay, so picture this: You’re deep underwater, totally lost in these twisty, shadowy caves, and your oxygen? Yeah, it’s running out. Fast. Don’t Drown is all about staying cool under pressure—literally. You’ve got to snatch bubbles from coral, figure out the maze, and find your way out before time (and air) runs out. No pressure, right?</p>
+    <div class="project-item">
+        <a href="https://jensawesomecode.github.io/JensAwesomeCode/" target="_blank">
+            <img src="jensawesomecodelogo.webp" alt="Jen's Awesome Code Logo">
+        </a>
+        <p><a href="https://jensawesomecode.github.io/JensAwesomeCode/" target="_blank">Jen's Awesome Code is my learning and testing project space.</a></p>
+        <p>Its purpose is to host a privacy policy, terms of use, and whatever other bureaucratic obstacles stand between me and things like learning how to use APIs and OAuth.</p>
+    </div>
 
-<p>This was a wild ride to make. We built the whole thing in just 48 hours during a game jam—pure chaos, fueled by caffeine and questionable decision-making. Our team? Absolute legends. Colin Witow’s the seasoned pro (12 jams under his belt), while the rest of us—Russell Nadin, David Kingdavong, and me, Jen Barrett—jumped into our very first jam with zero hesitation and a lot of enthusiasm. Somehow, we pulled off this adrenaline-fueled underwater adventure, and we are so proud of it.</p>
+    <div class="project-item">
+        <a href="https://example.com/greedmonster" target="_blank">
+            <img src="your_greedmonster_image.webp" alt="More projects coming soon!">
+        </a>
+    </div>
+</div>
 
-<p>It’s part puzzle, part survival, all heart-pounding action. Ready to see if you can make it out alive?</p>
-
-<p>Go on. Dive in.</p>
-        
-            <a href="https://jensawesomecode.github.io/JensAwesomeCode/" target="_blank">
-                <img src="jensawesomecodelogo.webp" alt="Jen's Awesome Code Logo">
-                <p>Jen's Awesome Code is my learning and testing project space.</p> </a>
-                <p>Its purpose is to host a privacy policy, terms of use, and whatever other beaureaucratic obstacles stand between me and things like learning how to use APIs and OAuth.</p>  
-            
-              <a href="https://example.com/greedmonster" target="_blank">
-                <img src="your_greedmonster_image.webp" alt="More projects coming soon!">
-            </a>
-            
-        </div>
     </main>
 
  <script>
