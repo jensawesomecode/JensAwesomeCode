@@ -56,12 +56,20 @@
             max-width: 800px;
         }
 
-        main p, main a {
-            font-size: 16pt;
-            margin-bottom: 20px;
-            color: #4eeae1;
-            text-decoration: underline;
-        }
+       main p {
+  font-size: 16pt;
+  margin-bottom: 20px;
+  color: #4eeae1;
+  text-decoration: none; /* no underline for plain text */
+}
+
+main a {
+  font-size: 16pt;
+  margin-bottom: 20px;
+  color: #4eeae1;
+  text-decoration: underline; /* keep links underlined */
+}
+
 
         main h1 {
             font-size: 26pt;
@@ -237,8 +245,7 @@
          
          <div class="project-item">
         <a href="https://jensawesomecode.itch.io/dont-drown" target="_blank">
-            <img src="dontdrown.png" alt="Cover image for computer game Don't Drown">
-        </a>
+            <img src="dontdrown.png" alt="Cover image for computer game Don't Drown"></a>
         <p><a href="https://jensawesomecode.itch.io/dont-drown" target="_blank">Description: Underwater maze, survival, action, adventure, puzzle, game jam, time-based challenge.</a></p>
         <p>Okay, so picture this: You’re deep underwater, totally lost in these twisty, shadowy caves, and your oxygen? Yeah, it’s running out. Fast. <strong>Don’t Drown</strong> is all about staying cool under pressure—literally. You’ve got to snatch bubbles from coral, figure out the maze, and find your way out before time (and air) runs out. No pressure, right?</p>
         <p>During my first Unity game jam in January 2025, I built a custom 3D character controller in C# from scratch, despite having almost no prior Unity experience. The controller featured realistic physics-based movement, including walking, jumping, and momentum handling using Rigidbody components and Unity’s physics engine. I implemented grounded checks, smoothed directional input, and adjusted drag, friction, and force values to make movement feel responsive and natural. When unexpected behaviors occurred (like sliding or input lag), I used debug logs and iterative testing to isolate issues in my code, trace problems to specific methods, and refine interactions for consistency and playability.</p>
@@ -258,7 +265,7 @@
 
     <!-- Resume Banner -->
  <div id="resumeBanner" style="display:none;">
-  <button onclick="hideResume()">Close Resume</button>
+  <button id="closeBanner()">Close Resume</button>
   <pre class="resume-banner">
 OBJECTIVE
 To bring thoughtful, structured QA leadership to a collaborative studio that values creativity, curiosity, and joyful user experience.
